@@ -17,20 +17,19 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         ArrayList<StaffMember> lib = new ArrayList<>();
         CellStyle style = new CellStyle(CellStyle.HorizontalAlign.left);
-        Table table = new Table(1, BorderStyle.UNICODE_ROUND_BOX, ShownBorders.ALL);
         String data;
+        Table table = new Table(1, BorderStyle.UNICODE_ROUND_BOX, ShownBorders.ALL);
         do {
-
-                table.setColumnWidth(0, 30, 50);
-                table.addCell("STAFF MANAGEMENT SYSTEM", style);
-                table.addCell("1. Insert Employee", style);
-                table.addCell("2. Update Employee", style);
-                table.addCell("3. Display Employee", style);
-                table.addCell("4. Remove Employee", style);
-                table.addCell("5. Exit", style);
-                System.out.println(table.render());
-                System.out.println();
-                System.out.println("--------------------------------");
+            table.setColumnWidth(0, 30, 50);
+            table.addCell("STAFF MANAGEMENT SYSTEM", style);
+            table.addCell("1. Insert Employee", style);
+            table.addCell("2. Update Employee", style);
+            table.addCell("3. Display Employee", style);
+            table.addCell("4. Remove Employee", style);
+            table.addCell("5. Exit", style);
+            System.out.println(table.render());
+            System.out.println();
+            System.out.println("--------------------------------");
             while (true){
                 System.out.println("-> Enter your choice: ");
                 data = sc.nextLine();
@@ -62,6 +61,6 @@ public class Main {
                     break;
                 }
             }
-        } while (data.equals("0"));
+        } while (!data.equals("5"));
     }
 }
