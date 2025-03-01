@@ -1,0 +1,32 @@
+    static void update() {
+        System.out.println("Enter or Search ID to Update: ");
+        int inputId = sc.nextInt();
+        sc.nextLine();
+        staff.forEach(s -> {
+            if(inputId == s.id){
+                System.out.println("Enter new name: ");
+                String name = sc.nextLine();
+                System.out.println("Enter new address: ");
+                String address = sc.nextLine();
+                s.setAddress(address);
+                s.setName(name);
+                if(s instanceof Volunteer){
+                    Volunteer volunteer = (Volunteer) s;
+                    System.out.println("Enter new salary: ");
+                    double salary = sc.nextDouble();
+                    volunteer.setSalary(salary);
+                }else if(s instanceof SalariesEmployee){
+                    SalariesEmployee salariesEmployee = (SalariesEmployee) s;
+
+                }
+            }
+
+
+            System.out.println(s.id);
+            System.out.println(s.name);
+
+
+        });
+
+
+    }
