@@ -16,17 +16,17 @@ public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         ArrayList<StaffMember> lib = new ArrayList<>();
-        CellStyle style = new CellStyle(CellStyle.HorizontalAlign.left);
         String data;
-        Table table = new Table(1, BorderStyle.UNICODE_ROUND_BOX, ShownBorders.ALL);
+        CellStyle style = new CellStyle(CellStyle.HorizontalAlign.center);
+        Table table = new Table(1, BorderStyle.UNICODE_ROUND_BOX, ShownBorders.SURROUND_HEADER_AND_COLUMNS);
+        table.setColumnWidth(0, 30, 50);
+        table.addCell("STAFF MANAGEMENT SYSTEM", style);
+        table.addCell("1. Insert Employee");
+        table.addCell("2. Update Employee");
+        table.addCell("3. Display Employee");
+        table.addCell("4. Remove Employee");
+        table.addCell("5. Exit");
         do {
-            table.setColumnWidth(0, 30, 50);
-            table.addCell("STAFF MANAGEMENT SYSTEM", style);
-            table.addCell("1. Insert Employee", style);
-            table.addCell("2. Update Employee", style);
-            table.addCell("3. Display Employee", style);
-            table.addCell("4. Remove Employee", style);
-            table.addCell("5. Exit", style);
             System.out.println(table.render());
             System.out.println();
             System.out.println("--------------------------------");

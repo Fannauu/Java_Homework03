@@ -26,7 +26,7 @@ public class SalariesEmployee extends StaffMember{
 
     @Override
     public double pay(){
-        return salary * bonus;
+        return salary + bonus;
     }
 
     @Override
